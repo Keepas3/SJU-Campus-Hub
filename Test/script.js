@@ -7,7 +7,8 @@ const eventsData = [
         date: "2025-04-27",
         location: "St. Augustine Hall - 2nd Floor",
         image: "/Images/Hackathon.png",
-        link: "hackathon.html" // Link to the detailed page
+        link: "/Test/hackathon.html", // Link to the detailed page
+        category: ["Academic","Tech"]
     },
     {
         title: "Campus Club Fair",
@@ -15,7 +16,9 @@ const eventsData = [
         date: "2025-04-28",
         location: "Great Lawn",
         image: "/Images/Campus_fair.png",
-        link: "club_fair.html" // Link to the detailed page
+        link: "/Test/club_fair.html", // Link to the detailed page
+        category: ["Social Activites", "Academic"]
+
     },
     {
         title: "Midnight Breakfast",
@@ -23,7 +26,8 @@ const eventsData = [
         date: "2025-05-01",
         location: "Marillac Cafeteria",
         image: "/Images/breakfast.png",
-        link: "midnight_breakfast.html"
+        link: "/Test/midnight_breakfast.html",
+        category: ["Community", "Social Activities"]
     },
     {
         title: "Intramural Basketball Finals",
@@ -31,7 +35,8 @@ const eventsData = [
         date: "2025-05-03",
         location: "Carnesecca Arena",
         image: "/Images/basketball.png",
-        link: "basketball_finals.html"
+        link: "/Test/basketball_finals.html",
+        category: "Sports"
     },
     {
         title: "Spring Concert",
@@ -39,7 +44,9 @@ const eventsData = [
         date: "2025-05-05",
         location: "Carnesecca Plaza",
         image: "/Images/Spring_Concert.png",
-        link: "spring_concert.html"
+        link: "/Test/spring_concert.html",
+        category: "Community"
+
     },
     {
         title: "Community Service Day",
@@ -47,9 +54,125 @@ const eventsData = [
         date: "2025-05-10",
         location: "Various Locations",
         image: "/Images/Community_Service.png",
-        link: "service_day.html"
+        link: "/Test/service_day.html",
+        category: ["Community","Social Activities"]
+    },
+    {
+        title: "St. John's Coding Bootcamp",
+        description: "Join a crash course on web development and data science!",
+        date: "2025-05-12",
+        location: "DAC 204",
+        image: "/Images/Bootcamp.png",
+        link: "/Test/coding_bootcamp.html",
+        category: ["Academic", "Tech"]
+    },
+    {
+        title: "Student Art Exhibition",
+        description: "Discover amazing student artwork at the annual exhibition!",
+        date: "2025-05-15",
+        location: "Little Theatre",
+        image: "/Images/Art_Exhibit.png",
+        link: "/Test/art_exhibition.html",
+        category: ["Arts", "Community"]
+    },
+    {
+        title: "Career Networking Night",
+        description: "Connect with alumni and professionals for career opportunities!",
+        date: "2025-05-18",
+        location: "Bent Hall",
+        image: "/Images/Career_Night.png",
+        link: "/Test/career_night.html",
+        category: ["Academic", "Social Activities"]
+    },
+    {
+        title: "Movie Night Under the Stars",
+        description: "Enjoy a movie screening with snacks and friends!",
+        date: "2025-05-20",
+        location: "Great Lawn",
+        image: "/Images/Movie_Night.png",
+        link: "/Test/movie_night.html",
+        category: ["Social Activities", "Community"]
+    },
+    {
+        title: "E-Sports Tournament",
+        description: "Compete in popular games for prizes and bragging rights!",
+        date: "2025-05-22",
+        location: "Student Center",
+        image: "/Images/Esports.png",
+        link: "/Test/esports_tournament.html",
+        category: ["Tech", "Sports"]
+    },
+    {
+        title: "Meditation & Wellness Workshop",
+        description: "Learn mindfulness techniques to reduce stress and improve focus!",
+        date: "2025-05-25",
+        location: "Wellness Center",
+        image: "/Images/Meditation.png",
+        link: "/Test/meditation_workshop.html",
+        category: ["Community", "Academic"]
     }
 ];
+
+function searchEvents() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('#events .event-card'); // Changed from #clubs to #events
+
+    cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        if (title.includes(input)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+document.getElementById("allBtn").addEventListener("click", () => {
+    displayEvents(eventsData); // Show all events
+});
+document.getElementById("newEventsBtn").addEventListener("click", () => {
+    const today = new Date();
+    const oneWeekLater = new Date();
+    oneWeekLater.setDate(today.getDate() + 7); // Set the date to 7 days ahead
+
+    // Filter events happening within the next week
+    const newEvents = eventsData.filter(event => {
+        const eventDate = new Date(event.date);
+        return eventDate >= today && eventDate <= oneWeekLater;
+    });
+
+    displayEvents(newEvents);
+});
+
+document.getElementById("socialBtn").addEventListener("click", () => {
+    const filteredEvents = eventsData.filter(event => event.category.includes("Social Activities"));
+    displayEvents(filteredEvents);
+});
+
+document.getElementById("academicBtn").addEventListener("click", () => {
+    const filteredEvents = eventsData.filter(event => event.category.includes("Academic"));
+    displayEvents(filteredEvents);
+});
+
+document.getElementById("sportsBtn").addEventListener("click", () => {
+    const filteredEvents = eventsData.filter(event => event.category.includes("Sports"));
+    displayEvents(filteredEvents);
+});
+
+document.getElementById("communityBtn").addEventListener("click", () => {
+    const filteredEvents = eventsData.filter(event => event.category.includes("Community"));
+    displayEvents(filteredEvents);
+});
+
+document.getElementById("techBtn").addEventListener("click", () => {
+    const filteredEvents = eventsData.filter(event => event.category.includes("Tech"));
+    displayEvents(filteredEvents);
+});
+
+document.getElementById("artsBtn").addEventListener("click", () => {
+    const filteredEvents = eventsData.filter(event => event.category.includes("Arts"));
+    displayEvents(filteredEvents);
+});
 
 
 document.addEventListener("DOMContentLoaded", () => {

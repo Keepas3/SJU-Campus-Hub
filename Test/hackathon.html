@@ -5,17 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackathon - Event Details</title>
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" type="image/png" href="/Images/logo.png">
+    
+    <script>
+        // Function to show confirmation message
+        function confirmRegistration(event) {
+            event.preventDefault();  // Prevent form submission
+
+            // Show confirmation message
+            const confirmationMessage = document.createElement("p");
+            confirmationMessage.textContent = "Your registration has been confirmed!";
+            confirmationMessage.style.fontSize = "18px";
+            confirmationMessage.style.color = "green";
+
+            // Append the confirmation message to the main content
+            const mainContent = document.querySelector("main");
+            mainContent.innerHTML = "";  // Clear the existing content
+            mainContent.appendChild(confirmationMessage);
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Hackathon 2025</h1>
-        <!-- Home button -->
-        <a href="index.html" class="home-button">Home</a>
+        <!-- Home button that links to index.html -->
+        <a href="/index.html" class="home-button">Home</a>
     </header>
     
     <main>
         <section class="event-details">
-            <img src="Images/Hackathon.png" alt="Hackathon">
+            <img src="/Images/Hackathon.png" alt="Hackathon">
             <h2>Event Details</h2>
             <p><strong>Date:</strong> April 27, 2025</p>
             <p><strong>Time:</strong> 10:00 AM - 6:00 PM</p>
@@ -28,7 +48,7 @@
 
         <section class="registration-form">
             <h2>Register for the Hackathon</h2>
-            <form action="submit_registration.php" method="POST">
+            <form onsubmit="confirmRegistration(event)">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
@@ -50,8 +70,6 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 St. John's University. All Rights Reserved.</p>
-    </footer>
+   
 </body>
 </html>

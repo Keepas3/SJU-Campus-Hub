@@ -3,85 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St. John's University - Campus Events</title>
+    <title>St. John's University - Clubs</title>
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" type="image/png" href="/Images/logo.png">
 </head>
 <body>
 
     <header>
         <div class="logo">
-            <img src="images/St.-Johns-Red-Storm-logo.png" alt="St. John's University Logo" class="logo-img">
-            <h1>St. John's University</h1>
+            <img src="/Images/logo.png" alt="St. John's University Logo" class="logo-img">
+            <h1>SJU Campus Hub</h1>
         </div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="calendar.html">Calendar</a>
-            <a href="academics.html">Academics</a>
-            <a href="clubs.html">Clubs</a>
-            <a href="contact.html">Contact</a>
+            <a href="/index.html">Home</a>
+            <a href="/Test/calendar.html">Calendar</a>
+            <a href="/Test/academics.html">Academics</a>
+            <a href="/Test/clubs.html">Clubs</a>
+            <a href="/Test/contact.html">About</a>
         </nav>
     </header>
-    
 
     <!-- Main Content Section -->
     <main>
         <section class="hero">
-            <h2>Discover Upcoming Events at St. John's</h2>
+            <h2>Explore Clubs at St. John's</h2>
             <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search events..." oninput="searchEvents()">
+                <input type="text" id="searchInput" placeholder="Search clubs..." oninput="searchClubs()">
             </div>
         </section>
 
-        <!-- Categories Section -->
-        <section class="categories">
-            <button>All</button>
-            <button>New Events</button>
-            <button>Social Activities</button>
-            <button>Academic</button>
-            <button>Sports</button>
-            <button>Community</button>
-            <button>Tech</button>
-            <button>Arts</button>
-        </section>
-
-        <!-- Events Grid Section -->
-        <section id="events" class="events-grid">
+        <section id="clubs" class="events-grid">
             <div class="event-card">
-                <img src="/Images/Hackathon.png" alt="Hackathon">
+                <img src="/Images/AlphaPhiOmega.png" alt="Alpha Phi Omega">
                 <div class="content">
-                    <h3>Indoor Pickup Soccer</h3>
-                    <p>Join us for a fun soccer game!</p>
-                    <p><strong>Date:</strong> April 27, 2025</p>
-                    <p><strong>Location:</strong> 2015 PITKIN AVE</p>
+                    <span class="club-tag">Service & Leadership</span>
+                    <h3>Alpha Phi Omega</h3>
+                    <p>A nationwide co-ed service fraternity that builds leadership skills through volunteer work, community service, and friendship-building activities.</p>
+                    <p><strong>Meeting Time:</strong> Thursdays 7 PM</p>
+                    <p><strong>Location:</strong> DAC Room 206</p>
                 </div>
             </div>
+        
+            <a href="acm.html" target="_blank">
+                <div class="event-card">
+                    <img src="/Images/ACM.png" alt="SJU ACM">
+                    <div class="content">
+                        <span class="club-tag">Computer Science & Technology</span>
+                        <h3>SJU ACM</h3>
+                        <p>Join a community of tech enthusiasts exploring software development, cybersecurity, and innovative projects through workshops and networking events.</p>
+                        <p><strong>Meeting Time:</strong> Thursdays 1:50 - 3:15 PM</p>
+                        <p><strong>Location:</strong> St. Augustine Cyber Lab 2nd Floor</p>
+                    </div>
+                </div>
+            </a>
+        
             <div class="event-card">
-                <img src="brunch.jpg" alt="Brunch and Chill">
+                <img src="/Images/GirlsWhoCode.png" alt="Girls Who Code">
                 <div class="content">
-                    <h3>Brunch and Chill</h3>
-                    <p>Make new friends over brunch.</p>
-                    <p><strong>Date:</strong> April 27, 2025</p>
-                    <p><strong>Location:</strong> Secretville</p>
+                    <span class="club-tag">Women in STEM</span>
+                    <h3>Girls Who Code</h3>
+                    <p>A supportive group dedicated to closing the gender gap in technology by fostering coding skills, mentorship, and confidence-building in women in STEM.</p>
+                    <p><strong>Meeting Time:</strong> Thursdays 5 PM</p>
+                    <p><strong>Location:</strong> DAC 206</p>
                 </div>
             </div>
+        
             <div class="event-card">
-                <img src="ai_meetup.jpg" alt="DigitalOcean AI Meetup">
+                <img src="/Images/Debate_Club.png" alt="Debate Society">
                 <div class="content">
-                    <h3>DigitalOcean AI Meetup</h3>
-                    <p>Learn about AI and network.</p>
-                    <p><strong>Date:</strong> May 9, 2025</p>
-                    <p><strong>Location:</strong> 101 Ave of the Americas</p>
+                    <span class="club-tag">Public Speaking & Debate</span>
+                    <h3>Debate Society</h3>
+                    <p>Engage in spirited discussions, refine your argumentation skills, and compete in regional and national debate tournaments with fellow thinkers.</p>
+                    <p><strong>Meeting Time:</strong> Thursdays 5 PM</p>
+                    <p><strong>Location:</strong> DAC 206</p>
+                </div>
+            </div>
+        
+            <div class="event-card">
+                <img src="/Images/Photography.png" alt="Photography Club">
+                <div class="content">
+                    <span class="club-tag">Arts & Creativity</span>
+                    <h3>Photography Club</h3>
+                    <p>Capture stunning moments and improve your photography skills through group outings, creative challenges, and exhibits featuring member work.</p>
+                    <p><strong>Meeting Time:</strong> Saturdays 2 PM</p>
+                    <p><strong>Location:</strong> DAC 312</p>
+                </div>
+            </div>
+        
+            <div class="event-card">
+                <img src="/Images/Finance_Club.png" alt="Finance & Investment Club">
+                <div class="content">
+                    <span class="club-tag">Business & Finance</span>
+                    <h3>Finance & Investment Club</h3>
+                    <p>Dive into the world of finance! Learn about stock trading, investment strategies, and career paths in banking, entrepreneurship, and fintech.</p>
+                    <p><strong>Meeting Time:</strong> Mondays 4 PM</p>
+                    <p><strong>Location:</strong> Bent Hall 105</p>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 St. John's University. All Rights Reserved.</p>
-    </footer>
+   
 
     <!-- External JS -->
-    <script src="script.js"></script>
+    <script>
+        function searchClubs() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('#clubs .event-card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(input)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <footer>
+        <p></p>
+    <footer>
+
 </body>
+
+<footer>
+    <p></p>
+<footer>
+    
 </html>
