@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. John's University - Campus Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="/Images/logo.png" alt="St. John's University Logo" class="logo-img">
+            <h1>St. John's University</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="academics.html">Academics</a>
+            <a href="clubs.html">Clubs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="hero">
+            <h2>Campus Event Calendar</h2>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search events..." oninput="searchEvents()">
+            </div>
+        </section>
+
+        <!-- Calendar Navigation -->
+        <section id="calendarContainer">
+            <h3>Select a Date to View Events</h3>
+            <div class="calendar-header">
+                <button onclick="changeMonth(-1)">◀ Prev</button>
+                <h3 id="monthYear"></h3>
+                <button onclick="changeMonth(1)">Next ▶</button>
+            </div>
+            <div id="calendar" class="calendar"></div>
+        </section>
+
+        <!-- Events Display Section -->
+        <section id="events" class="events-list">
+            <!-- Events will be dynamically loaded here -->
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Created with ❤️ by Your Team</p>
+    </footer>
+
+    <!-- External JS -->
+    <script src="calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - St. John's University</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/Images/logo.png" alt="St. John's University Logo" class="logo-img">
+                <h1 class="site-title">St. John's University</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="calendar.html">Calendar</a>
+                <a href="academics.html">Academics</a>
+                <a href="clubs.html">Clubs</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Academics at St. John's</h2>
+            <p>Explore programs, courses, academic resources, and find your study squad!</p>
+        </section>
+
+        <section class="study-groups" style="padding: 40px 20px;">
+            <h2 style="text-align: center; margin-bottom: 20px;">Find a Study Group</h2>
+
+            <div style="max-width: 600px; margin: 0 auto;">
+                <form id="studyGroupForm" style="display: flex; flex-direction: column; gap: 15px;">
+                    <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; font-size: 1em;">
+                    <input type="text" name="course" placeholder="Course Name (e.g., MATH 1010C)" required style="padding: 10px; font-size: 1em;">
+                    <input type="text" name="availability" placeholder="Availability (e.g., M/W afternoons)" required style="padding: 10px; font-size: 1em;">
+                    <textarea name="message" placeholder="Anything else? (optional)" rows="4" style="padding: 10px; font-size: 1em;"></textarea>
+                    <button type="submit" style="padding: 12px; background-color: #E53935; color: white; border: none; border-radius: 5px; font-size: 1em; cursor: pointer;">
+                        Submit Request
+                    </button>
+                </form>
+
+                <div id="confirmationMessage" style="display: none; margin-top: 20px; color: #4CAF50; font-weight: bold; text-align: center;">
+                    🎉 Your study group request has been submitted!
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 St. John's University. All Rights Reserved.</p>
+    </footer>
+
+    <script src="academics.js"></script>
+
+</body>
+</html>

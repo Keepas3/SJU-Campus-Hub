@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. John's University - Campus Events</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/St.-Johns-Red-Storm-logo.png" alt="St. John's University Logo" class="logo-img">
+            <h1>St. John's University</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="academics.html">Academics</a>
+            <a href="clubs.html">Clubs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="hero">
+            <h2>Discover Upcoming Events at St. John's</h2>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search events..." oninput="searchEvents()">
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <button>All</button>
+            <button>New Events</button>
+            <button>Social Activities</button>
+            <button>Academic</button>
+            <button>Sports</button>
+            <button>Community</button>
+            <button>Tech</button>
+            <button>Arts</button>
+        </section>
+
+        <!-- Events Grid Section -->
+        <section id="events" class="events-grid">
+            <div class="event-card">
+                <img src="/Images/Hackathon.png" alt="Hackathon">
+                <div class="content">
+                    <h3>Indoor Pickup Soccer</h3>
+                    <p>Join us for a fun soccer game!</p>
+                    <p><strong>Date:</strong> April 27, 2025</p>
+                    <p><strong>Location:</strong> 2015 PITKIN AVE</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="brunch.jpg" alt="Brunch and Chill">
+                <div class="content">
+                    <h3>Brunch and Chill</h3>
+                    <p>Make new friends over brunch.</p>
+                    <p><strong>Date:</strong> April 27, 2025</p>
+                    <p><strong>Location:</strong> Secretville</p>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="ai_meetup.jpg" alt="DigitalOcean AI Meetup">
+                <div class="content">
+                    <h3>DigitalOcean AI Meetup</h3>
+                    <p>Learn about AI and network.</p>
+                    <p><strong>Date:</strong> May 9, 2025</p>
+                    <p><strong>Location:</strong> 101 Ave of the Americas</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 St. John's University. All Rights Reserved.</p>
+    </footer>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+</html>
