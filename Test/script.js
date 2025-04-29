@@ -7,7 +7,7 @@ const eventsData = [
         date: "2025-04-27",
         location: "St. Augustine Hall - 2nd Floor",
         image: "/Images/Hackathon.png",
-        link: "/Test/hackathon.html", // Link to the detailed page
+        link: "/Test/Events/hackathon.html", // Link to the detailed page
         category: ["Academic","Tech"]
     },
     {
@@ -16,7 +16,7 @@ const eventsData = [
         date: "2025-04-28",
         location: "Great Lawn",
         image: "/Images/Campus_fair.png",
-        link: "/Test/club_fair.html", // Link to the detailed page
+        link: "/Test/Events/club_fair.html", // Link to the detailed page
         category: ["Social Activites", "Academic"]
 
     },
@@ -26,7 +26,7 @@ const eventsData = [
         date: "2025-05-01",
         location: "Marillac Cafeteria",
         image: "/Images/breakfast.png",
-        link: "/Test/midnight_breakfast.html",
+        link: "/Test/Events/midnight_breakfast.html",
         category: ["Community", "Social Activities"]
     },
     {
@@ -35,7 +35,7 @@ const eventsData = [
         date: "2025-05-03",
         location: "Carnesecca Arena",
         image: "/Images/basketball.png",
-        link: "/Test/basketball_finals.html",
+        link: "/Test/Events/basketball_finals.html",
         category: "Sports"
     },
     {
@@ -44,7 +44,7 @@ const eventsData = [
         date: "2025-05-05",
         location: "Carnesecca Plaza",
         image: "/Images/Spring_Concert.png",
-        link: "/Test/spring_concert.html",
+        link: "/Test/Events/spring_concert.html",
         category: "Community"
 
     },
@@ -54,7 +54,7 @@ const eventsData = [
         date: "2025-05-10",
         location: "Various Locations",
         image: "/Images/Community_Service.png",
-        link: "/Test/service_day.html",
+        link: "/Test/Events/service_day.html",
         category: ["Community","Social Activities"]
     },
     {
@@ -63,7 +63,7 @@ const eventsData = [
         date: "2025-05-12",
         location: "DAC 204",
         image: "/Images/Bootcamp.png",
-        link: "/Test/coding_bootcamp.html",
+        link: "/Test/Events/coding_bootcamp.html",
         category: ["Academic", "Tech"]
     },
     {
@@ -72,7 +72,7 @@ const eventsData = [
         date: "2025-05-15",
         location: "Little Theatre",
         image: "/Images/Art_Exhibit.png",
-        link: "/Test/art_exhibition.html",
+        link: "/Test/Events/art_exhibition.html",
         category: ["Arts", "Community"]
     },
     {
@@ -81,7 +81,7 @@ const eventsData = [
         date: "2025-05-18",
         location: "Bent Hall",
         image: "/Images/Career_Night.png",
-        link: "/Test/career_night.html",
+        link: "/Test/Events/career_night.html",
         category: ["Academic", "Social Activities"]
     },
     {
@@ -90,7 +90,7 @@ const eventsData = [
         date: "2025-05-20",
         location: "Great Lawn",
         image: "/Images/Movie_Night.png",
-        link: "/Test/movie_night.html",
+        link: "/Test/Events/movie_night.html",
         category: ["Social Activities", "Community"]
     },
     {
@@ -99,7 +99,7 @@ const eventsData = [
         date: "2025-05-22",
         location: "Student Center",
         image: "/Images/Esports.png",
-        link: "/Test/esports_tournament.html",
+        link: "/Test/Events/esports_tournament.html",
         category: ["Tech", "Sports"]
     },
     {
@@ -108,7 +108,7 @@ const eventsData = [
         date: "2025-05-25",
         location: "Wellness Center",
         image: "/Images/Meditation.png",
-        link: "/Test/meditation_workshop.html",
+        link: "/Test/Events/meditation_workshop.html",
         category: ["Community", "Academic"]
     }
 ];
@@ -130,6 +130,7 @@ function searchEvents() {
 document.getElementById("allBtn").addEventListener("click", () => {
     displayEvents(eventsData); // Show all events
 });
+
 document.getElementById("newEventsBtn").addEventListener("click", () => {
     const today = new Date();
     const oneWeekLater = new Date();

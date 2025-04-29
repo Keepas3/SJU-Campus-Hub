@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hackathon - Event Details</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Campus Club Fair - Event Details</title>
+    <link rel="stylesheet" href="/Test/styles.css">
 
     <link rel="icon" type="image/png" href="/Images/logo.png">
     
@@ -28,26 +28,24 @@
 </head>
 <body>
     <header>
-        <h1>Hackathon 2025</h1>
+        <h1>Campus Club Fair 2025</h1>
         <!-- Home button that links to index.html -->
         <a href="/index.html" class="home-button">Home</a>
     </header>
     
     <main>
         <section class="event-details">
-            <img src="/Images/Hackathon.png" alt="Hackathon">
+            <img src="/Images/Campus_fair.png" alt="Campus Club Fair">
             <h2>Event Details</h2>
-            <p><strong>Date:</strong> April 27, 2025</p>
-            <p><strong>Time:</strong> 10:00 AM - 6:00 PM</p>
-            <p><strong>Location:</strong> St. John's University</p>
+            <p><strong>Date:</strong> April 28, 2025</p>
+            <p><strong>Location:</strong> Great Lawn</p>
             <p>
-                Join us for an exciting Hackathon where students and faculty come together to innovate, collaborate, and create amazing projects. 
-                This event is open to all skill levels, from beginners to experienced developers. Don't miss this opportunity to learn, network, and showcase your skills!
+                Explore all the clubs and organizations St. John's has to offer! Join us for an exciting day where you can meet like-minded individuals, sign up for various clubs, and learn more about the opportunities available at St. John's.
             </p>
         </section>
 
         <section class="registration-form">
-            <h2>Register for the Hackathon</h2>
+            <h2>Register for the Campus Club Fair</h2>
             <form onsubmit="confirmRegistration(event)">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -58,11 +56,11 @@
                 <label for="studentId">Student ID:</label>
                 <input type="text" id="studentId" name="studentId" placeholder="Enter your Student ID" required>
 
-                <label for="experience">Experience Level:</label>
-                <select id="experience" name="experience" required>
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
+                <label for="interest">Area of Interest:</label>
+                <select id="interest" name="interest" required>
+                    <option value="clubs">Clubs</option>
+                    <option value="organizations">Organizations</option>
+                    <option value="both">Both</option>
                 </select>
 
                 <button type="submit">Register</button>
@@ -70,6 +68,6 @@
         </section>
     </main>
 
-   
+    
 </body>
 </html>
