@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St. John's University - About Us</title>
+    <title>About Us - SJU Campus Hubs</title>
     <link rel="stylesheet" href="styles.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/Images/logo.png">
 </head>
 <body>
@@ -18,12 +19,13 @@
             <h1>SJU Campus Hub</h1>
         </div>
         <nav>
-            <a href="/index.html">Home</a>
+            <a href="/">Home</a>
             <a href="/Test/calendar.html">Calendar</a>
             <a href="/Test/academics.html">Academics</a>
             <a href="/Test/clubs.html">Clubs</a>
             <a href="/Test/contact.html">About</a>
         </nav>
+        <i class='bx bx-menu'></i>
     </header>
 
     <!-- Main Content Section -->
@@ -31,7 +33,8 @@
         <section class="hero">
             <h2>About St. John's University</h2>
             <p>It is with great pride that we welcome you to the St. John’s University family!
-                Once again, congratulations on your acceptance - we are excited to meet you at our events and see you on campus soon!</p>
+                On campus, in the community, and around the globe, St. John’s encourages you to explore your interests while making a palpable difference by serving others.
+                Catholic, Vincentian, Metropolitan, Global, and on a Mission to Ensure Student Success </p>
         </section>
 
         <!-- Mission Section -->
@@ -52,35 +55,46 @@
             <p>Residence Life aims to develop a residential community that supports and enhances the academic mission of St. John's University and promotes safe, clean and comfortable living environments conducive to learning.</p>
         </section>
 
-        <!-- Contact Information Section -->
-<!-- Contact Information Section -->
-<section class="contact-info">
-    <h2>Contact Us</h2>
-    <p>Have questions? Reach out to us using the information below.</p>
 
-    <div class="contact-box">
-        <h3>📍 Address</h3>
-        <p>8000 Utopia Pkwy, Queens, NY 11439</p>
-    </div>
 
-    <div class="contact-box">
-        <h3>📞 Phone</h3>
-        <p>+1 (718) 990-2000</p>
-    </div>
+<section class="feedback">
+    <h2>Share Your Feedback</h2>
+    <p>We’d love to hear your thoughts!</p>
+    
+    <form id="feedbackForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <div class="contact-box">
-        <h3>📧 Email</h3>
-        <p>info@stjohns.edu</p>
-    </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Feedback:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="feedbackResponse"></div>
 </section>
     </main>
 
      <!-- Footer Section -->
      <footer>
-        <p>©2025 SJU Campus Hub. All rights reserved.
+    <section class="contact-info">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us using the information below.</p>
+        <div class="home__social">
+                    <a href="https://www.linkedin.com/school/st.-john's-university/posts/?feedView=all" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/stjohnsu/" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://www.facebook.com/stjohnsu/" class="home__social-icon"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://x.com/StJohnsU" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.youtube.com/user/stjohnsedu" class="home__social-icon"><i class='bx bxl-youtube' ></i></a>
+                    <a href="mailto:adm@stjohns.edu" class="home__social-icon"><i class='bx bx-envelope'></i></a>
+                </div>
+    </section>
+    <p>©2025 SJU Campus Hub. All rights reserved.</p>
+</footer>
 
-        </p>
-    </footer>
     <!-- External JS -->
     <script src="script.js"></script>
 

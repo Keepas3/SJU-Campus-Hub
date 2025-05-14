@@ -203,3 +203,17 @@ function displayEvents(events) {
         eventsContainer.appendChild(eventCard);
     });
 }
+document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    if (name && email && message) {
+        document.getElementById("feedbackResponse").innerHTML = `<p>Thank you, ${name}! Your feedback has been received.</p>`;
+        this.reset();
+    } else {
+        document.getElementById("feedbackResponse").innerHTML = `<p>Please fill out all fields.</p>`;
+    }
+});

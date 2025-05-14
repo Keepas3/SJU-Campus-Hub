@@ -7,6 +7,9 @@ body {
     color: #333;
 }
 
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
 header {
     background-color: #c8102e; /* St. John's red */
     color: white;
@@ -23,7 +26,7 @@ header .logo {
 }
 
 header .logo-img {
-    height: 65px;
+    height: 75px;
     margin-right: 10px;
 }
 
@@ -246,6 +249,23 @@ button:hover {
     transition: background-color 0.3s ease;
 }
 
+/*Styling for social media icons */
+.home__social {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Adds spacing between icons */
+}
+
+.home__social-icon {
+  font-size: 2rem; /* Makes icons bigger */
+  color: #df3f5a; /* St. John's red */
+  transition: 0.3s ease-in-out;
+}
+
+.home__social-icon:hover {
+  color: #0073e6; /* Change color on hover */
+}
+
 #requestsContainer {
     display: flex;
     flex-direction: column;
@@ -316,8 +336,26 @@ section {
 .contact-info {
     font-size: 18px;  /* Sets the font size */
     font-weight: bold; /* Makes the text stand out */
-    color: #df3f5a;  /* St. John's red for emphasis */
+    color: #ffffff;  /* St. John's white for emphasis */
 }
+/* Add to your styles.css */
+.contact-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: auto;
+    height:auto;
+    margin-top: 10px;
+}
+
+.contact-box {
+    background: #ccbfbf;
+    color: #222;
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
 .club-tag {
     display: inline-block;
     background-color: #c8102e; /* St. John's red */
@@ -356,4 +394,70 @@ header {
 footer {
     padding: 20px 40px;
     text-align: center;
+}
+
+/* contact.html */
+.feedback {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.feedback h2 {
+    color: #333;
+    text-align: center;
+}
+
+.feedback p {
+    text-align: center;
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+    color: #444;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background: #0073e6;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #005bb5;
+}
+
+/* Style feedback response message */
+#feedbackResponse {
+    text-align: center;
+    color: #0073e6;
+    font-weight: bold;
+    margin-top: 15px;
 }
